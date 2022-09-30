@@ -48,6 +48,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		}
 	}
 
+	//123456789
 	scene.end();
 
 	DxLib_End();				// ＤＸライブラリ使用の終了処理
