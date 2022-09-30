@@ -7,14 +7,6 @@ namespace {
 	//グラフィックファイル名
 	const char* const kPlayerGraphicFilename = "data/char.png";
 
-	//プレイヤーグラフィック分割数
-	constexpr int kPlayerGraphicDivX = 3;
-	constexpr int kPlayerGraphicDivY = 4;
-	constexpr int kPlayerGraphicDivNum = kPlayerGraphicDivX * kPlayerGraphicDivY;
-
-	//プレイヤーグラフィックサイズ
-	constexpr int kPlayerGraphicSizeX = 32;
-	constexpr int kPlayerGraphicSizeY = 32;
 }
 
 
@@ -34,9 +26,9 @@ SceneMain::~SceneMain()
 // 初期化
 void SceneMain::init()
 {
-	LoadDivGraph(kPlayerGraphicFilename, kPlayerGraphicDivNum, kPlayerGraphicDivX, kPlayerGraphicDivY, kPlayerGraphicSizeX, kPlayerGraphicSizeY, m_hPlayerGraphic);
+	LoadDivGraph(kPlayerGraphicFilename, Player::kGraphicDivNum, Player::kGraphicDivX, Player::kGraphicDivY, Player::kGraphicSizeX, Player::kGraphicSizeY, m_hPlayerGraphic);
 	
-	for (int i = 0; i < kPlayerGraphicDivNum; i++) {
+	for (int i = 0; i < Player::kGraphicDivNum; i++) {
 		m_player.setHandle(i,m_hPlayerGraphic[i]);
 	}
 	
